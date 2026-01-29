@@ -11,9 +11,8 @@ export const addToNotion = async (
   title: string,
   category: Category
 ): Promise<void> => {
-  const targetUrl = 'https://api.notion.com/v1/pages';
-  // Using thingproxy as CORS proxy
-  const proxyUrl = `https://thingproxy.freeboard.io/fetch/${targetUrl}`;
+  // Using custom Cloudflare Worker as CORS proxy
+  const proxyUrl = 'https://winter-credit-2a39.diatra-yt.workers.dev/v1/pages';
 
   try {
     const response = await fetch(proxyUrl, {
