@@ -12,7 +12,8 @@ export const addToNotion = async (
   category: Category
 ): Promise<void> => {
   const targetUrl = 'https://api.notion.com/v1/pages';
-  const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
+  // Try multiple CORS proxies in order
+  const proxyUrl = `https://proxy.cors.sh/${targetUrl}`;
 
   try {
     const response = await fetch(proxyUrl, {
