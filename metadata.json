@@ -1,0 +1,5 @@
+{
+  "name": "Notion Idea Pipeline",
+  "description": "A productivity tool that parses ideas from three specific domains—My Month, My Results, and My Product—and syncs them directly to a Notion database with intelligent categorization.",
+  "requestFramePermissions": []
+}
